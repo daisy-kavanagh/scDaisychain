@@ -1,5 +1,6 @@
-# scDaisychain
 
+# scDaisychain
+[fig1_less_verbose.pdf](https://github.com/user-attachments/files/29033179/fig1_less_verbose.pdf)
 scDaisychain is a toolkit for haplotype-resolved analysis of X chromosome inactivation single-cell long-read RNA sequencing data.
 
 The software was developed and tested for Oxford Nanopore 10X single-cell datasets. Unlike short read 10X single cell sequencing where only the first 100 or 150bp of a transcript are typically captured, the longer read length of 10X nanopore sequencing allows for a greater number of SNPs to be used.
