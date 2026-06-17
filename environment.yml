@@ -1,0 +1,17 @@
+name: scDaisychain
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python>=3.9
+  - pandas
+  - numpy
+  - scipy
+  - pysam
+  - python-igraph
+  - bcftools
+  - htslib
+  - pip
+  - scanpy
+  - pip:
+      - -e .

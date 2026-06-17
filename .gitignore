@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# Environments
+.env
+.venv/
+conda-env/
+*.conda
+*.tar.bz2
+
+# Large/generated pipeline outputs
+scdaisychain_run/
+scripts/scdaisychain_run/
+*.bam
+*.bai
+*.cram
+*.crai
+*.vcf.gz
+*.vcf.gz.tbi
+*.vcf.gz.csi
+*.bcf
+*.bcf.csi
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+
+# Logs/temp
+*.log
+logs/
+tmp/
+temp/
+
+# Archives
+*.zip
+*.tar.gz
+
+# Mac
+.DS_Store
