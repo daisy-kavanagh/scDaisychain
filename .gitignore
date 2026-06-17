@@ -58,3 +58,14 @@ temp/
 !test_data/**/*.tsv.gz
 !test_data/**/*.csv
 !test_data/**/*.csv.gz
+# Test data are distributed through GitHub Releases, not committed to Git
+test_data/
+release_assets/
+*.tar.gz
+*.tgz
+
+# Test data are distributed through GitHub Releases, not committed to Git
+test_data/
+release_assets/
+*.tar.gz
+*.tgz

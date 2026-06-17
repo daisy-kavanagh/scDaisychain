@@ -13,7 +13,6 @@ dependencies:
   - htslib
   - pip
   - scanpy
-  - git-lfs
   - pip:
       - --no-deps
       - -e .
