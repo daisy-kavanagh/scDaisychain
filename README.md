@@ -10,21 +10,27 @@ Installable package for the XCI workflow:
 
 ## Install
 
-Recommended on HPC:
-
+First clone the github repo
 ```bash
-conda env create -f environment.yml
-conda activate scDaisychain
+git clone https://github.com/daisy-kavanagh/scDaisychain.git
+cd scDaisychain
 ```
 
-Or, from an existing environment:
+Easiest way to install is by creating a new mamba / conda environment which will include all dependencies:
+
+```bash
+
+mamba env create -f environment.yml
+mamba activate scDaisychain
+```
+
+Or you can install an existing environment:
 
 ```bash
 pip install -e .
 ```
-
-Python package dependencies are `pandas`, `numpy`, `scipy`, `pysam`, and `python-igraph`.
-The phasing step also calls external `bgzip` and `bcftools index`, so install `bcftools`/`htslib` through conda or your module system.
+Which will install the python package depdencies `pandas`, `numpy`, `scipy`, `pysam`, `scanpy` and `python-igraph`.
+The phasing step also calls external `bgzip` and `bcftools`, so install `bcftools`/`htslib` through mamba/conda or your module system.
 
 ## Commands
 
@@ -33,11 +39,11 @@ The package installs one full-pipeline command and one command per step:
 ```bash
 scDaisychain --help
 scDaisychain run --help
-xci-count-snps --help
-xci-phase-x --help
-xci-tag-bam --help
-xci-split-bam --help
-xci-make-matrices --help
+scDaisychain-count-snps --help
+scDaisychain-phase-x --help
+scDaisychain-tag-bam --help
+scDaisychain-split-bam --help
+scDaisychain-make-matrices --help
 ```
 
 ## Full pipeline example
@@ -54,7 +60,7 @@ scDaisychain run \
   --het-only \
   --min-reads 10 \
   --lower-cutoff 0.01 \
-  --partition-mode expression \
+  --partition-mode weighted \
   --tag-mode count
 ```
 
@@ -77,25 +83,4 @@ Use `--dry-run` to print the exact commands without running them:
 scDaisychain run ... --dry-run
 ```
 
-## Step-by-step commands
 
-```bash
-xci-count-snps --help
-xci-phase-x --help
-xci-tag-bam --help
-xci-split-bam --help
-xci-make-matrices --help
-```
-
-Each module is import-safe and follows the pattern:
-
-```python
-def parse_args(argv=None):
-    ...
-
-def main(argv=None):
-    ...
-
-if __name__ == "__main__":
-    raise SystemExit(main())
-```
