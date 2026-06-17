@@ -101,7 +101,7 @@ def parse_args(argv=None):
 
     p.add_argument("--cb-tag", default="CB", help="Read tag for cell barcode (default: CB).")
     p.add_argument("--min-mapq", type=int, default=20, help="Minimum mapping quality to count a read (default: 20).")
-    p.add_argument("--min-bq", type=int, default=13, help="Minimum base quality to count a base (default: 13).")
+    p.add_argument("--min-bq", type=int, default=10, help="Minimum base quality to count a base (default: 13).")
     p.add_argument("--max-depth", type=int, default=100000, help="Max pileup depth per site (default: 100000).")
     p.add_argument("--allow-secondary", action="store_true", help="Include secondary/supplementary alignments.")
     p.add_argument("--count-duplicates", action="store_true", help="Include reads marked as duplicates.")

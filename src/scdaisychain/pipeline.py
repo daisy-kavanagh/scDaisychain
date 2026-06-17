@@ -122,7 +122,7 @@ def add_run_arguments(p: argparse.ArgumentParser) -> argparse.ArgumentParser:
     group.add_argument("--window", type=int, default=5_000_000, help="Window size for parallel counting. Default: 5 Mb.")
     group.add_argument("--cb-tag", default="CB", help="Cell barcode tag. Default: CB.")
     group.add_argument("--min-mapq", type=int, default=20)
-    group.add_argument("--min-bq", type=int, default=13)
+    group.add_argument("--min-bq", type=int, default=10)
     group.add_argument("--max-depth", type=int, default=100000)
     group.add_argument("--allow-secondary", action="store_true")
     group.add_argument("--count-duplicates", action="store_true")
@@ -138,10 +138,10 @@ def add_run_arguments(p: argparse.ArgumentParser) -> argparse.ArgumentParser:
 
     # Phasing options
     group = p.add_argument_group("Phasing options")
-    group.add_argument("--min-reads", type=int, default=20, help="Minimum total reads per SNP for phasing. Default: 20.")
-    group.add_argument("--lower-cutoff", type=float, default=0.10, help="Lower ref-fraction cutoff. Default: 0.10.")
+    group.add_argument("--min-reads", type=int, default=10, help="Minimum total reads per SNP for phasing. Default: 20.")
+    group.add_argument("--lower-cutoff", type=float, default=0.01, help="Lower ref-fraction cutoff. Default: 0.10.")
     group.add_argument("--upper-cutoff", type=float, default=None)
-    group.add_argument("--partition-mode", choices=["unweighted", "weighted", "expression"], default="expression")
+    group.add_argument("--partition-mode", choices=["unweighted", "weighted", "expression"], default="weighted")
     group.add_argument("--edge-weight-mode", choices=["binary", "cosine", "overlap"], default=None)
     group.add_argument("--discordant-tsv", default=None)
     group.add_argument("--stage2-mode", choices=["cell", "expression"], default="cell")

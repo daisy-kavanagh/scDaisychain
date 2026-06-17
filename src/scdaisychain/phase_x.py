@@ -38,8 +38,8 @@ def parse_args(argv=None):
     )
     p.add_argument("filepath", help="Input TSV/CSV of allele counts")
     p.add_argument("outdir", help="Output directory")
-    p.add_argument("--min_reads", type=int, default=20, help="Minimum total reads per SNP (default: 20)")
-    p.add_argument("--lower_cutoff", type=float, default=0.10, help="Lower ref-fraction bound (default: 0.10)")
+    p.add_argument("--min_reads", type=int, default=10, help="Minimum total reads per SNP (default: 10)")
+    p.add_argument("--lower_cutoff", type=float, default=0.01, help="Lower ref-fraction bound (default: 0.01)")
     p.add_argument(
         "--upper_cutoff",
         type=float,
@@ -67,13 +67,13 @@ def parse_args(argv=None):
     p.add_argument(
         "--partition_mode",
         choices=["unweighted", "weighted", "expression"],
-        default="expression",
+        default="weighted",
         help=(
             "Graph partitioning mode. "
-            "unweighted = old binary topology only; "
+            "unweighted = binary topology only; "
             "weighted = binary/scaled co-occurrence edge weights; "
             "expression = expression-aware cosine edge weights. "
-            "Default: expression."
+            "Default: weighted."
         ),
     )
     p.add_argument(
