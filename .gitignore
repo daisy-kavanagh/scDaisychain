@@ -42,3 +42,11 @@ temp/
 
 # Mac
 .DS_Store
+
+
+
+
+# But allow small example/test data
+!test_data/
+!test_data/*.bam
+!test_data/*.bai
