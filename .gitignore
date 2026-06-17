@@ -50,3 +50,8 @@ temp/
 !test_data/
 !test_data/*.bam
 !test_data/*.bai
+!test_data/*.vcf.gz
+!test_data/*.vcf.gz.tbi
+!test_data/*.gtf
+!test_data/gene_raw_feature_bc_matrix/*
+!test_data/transcript_raw_feature_bc_matrix/*
