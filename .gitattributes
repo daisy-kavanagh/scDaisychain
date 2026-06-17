@@ -2,3 +2,4 @@
 *.bai filter=lfs diff=lfs merge=lfs -text
 test_data/*.bam filter=lfs diff=lfs merge=lfs -text
 test_data/*.bai filter=lfs diff=lfs merge=lfs -text
+test_data/genes.gtf filter=lfs diff=lfs merge=lfs -text
