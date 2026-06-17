@@ -42,13 +42,6 @@ pip install -e .
 Which will install the python package depdencies `pandas`, `numpy`, `scipy`, `pysam`, `scanpy` and `python-igraph`.
 The phasing step also calls external `bgzip` and `bcftools`, so install `bcftools`/`htslib` through mamba/conda or your module system.
 
-## Commands
-
-```bash
-scDaisychain --help
-scDaisychain run --help
-
-```
 
 ## Preprocessing
 Data Preprocessing The software requires a BAM file of single cell nanopore reads, with tags for gene name (GN), cell barcode (CB) and UMI (UB), and the raw gene expression matrices. This can be achieved for example with the [epi2me wf-singlecell pipeline](https://github.com/epi2me-labs/wf-single-cell).
@@ -59,6 +52,7 @@ An unphased vcf of variants is required also. For example for short read DNA seq
 
 
 ## Example usage
+
 Example mouse chrX C57/Bl6 X CAST/EiJ test data are available from the GitHub Releases page and can be downloaded as follows.
 
 ```bash
@@ -81,6 +75,11 @@ test_data/
     ├── barcodes.tsv.gz
     ├── features.tsv.gz
     └── matrix.mtx.gz
+```
+
+The full scDaisychain pipeline can be run with one command. The run parameters can be viewed with:
+```bash
+scDaisychain run --help
 ```
 
 The following is an example of how to run the pipeline using the provided mouse data:
