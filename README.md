@@ -42,7 +42,7 @@ Or you can install an existing environment:
 ```bash
 pip install -e .
 ```
-Which will install the python package depdencies `pandas`, `numpy`, `scipy`, `pysam`, `scanpy` and `python-igraph`.
+Which will install the python package depdencies `pandas`, `numpy`, `scipy`, `pysam`, `ipykernel`, `scanpy` and `python-igraph`.
 The phasing step also calls external `bgzip` and `bcftools`, so install `bcftools`/`htslib` through mamba/conda or your module system.
 
 
