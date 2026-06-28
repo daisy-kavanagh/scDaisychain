@@ -13,9 +13,10 @@ dependencies = [
     "numpy",
     "scipy",
     "pysam",
-    "python-igraph",
+    "igraph",
     "pip",
-    "scanpy"
+    "scanpy",
+    "ipykernel"
 ]
 
 [project.scripts]
