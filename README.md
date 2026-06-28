@@ -1,6 +1,6 @@
 
 # scDaisychain
-<img width="2126" height="1277" alt="fig1_less_verbose" src="https://github.com/user-attachments/assets/cc5cc668-b60b-4074-985b-96663244e74a" />
+<img width="2126" height="2363" alt="fig1_less_verbose_outputs_network" src="https://github.com/user-attachments/assets/f2b68d4a-9533-40bf-b8c2-79ab610fb14a" />
 
 
 scDaisychain is a toolkit for haplotype-resolved analysis of X chromosome inactivation single-cell long-read RNA sequencing data.
