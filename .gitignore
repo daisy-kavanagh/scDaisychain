@@ -69,3 +69,4 @@ test_data/
 release_assets/
 *.tar.gz
 *.tgz
+test_data/
