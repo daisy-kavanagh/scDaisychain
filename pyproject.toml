@@ -25,6 +25,6 @@ scDaisychain-phase-x = "scdaisychain.phase_x:main"
 scDaisychain-tag-bam = "scdaisychain.tag_bam:main"
 scDaisychain-split-bam = "scdaisychain.split_bam:main"
 scDaisychain-make-matrices = "scdaisychain.make_matrices:main"
-
+scDaisychain-xi-downstream = "scdaisychain.xi_downstream:main"
 [tool.setuptools.packages.find]
 where = ["src"]
