@@ -170,6 +170,19 @@ res = dc.run_xi_downstream_from_adata(
 
 Alternatively, if you have a h5ad file with the Xa/Xi layers loaded and cell type column it can be run from command line:
 ```bash
-
+python xi_downstream_from_anndata.py \
+  --h5ad adata.h5ad \
+  --annotation mouse_mouse_chrX_PAR_escape_annotation_for_xi_pipeline.tsv \
+  --outdir xi_outputs \
+  --xi-layer Xi \
+  --xa-layer Xa \
+  --donor-col sample \
+  --celltype-col cluster_majority_celltype \
+  --gene-name-col var_names \
+  --healthy-only false \
+  --chrX-only true \
+  --escape-mode recovery \
+  --xi-cutoff 0.10 \
+  --min-donors 1
 ```
 
