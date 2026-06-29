@@ -6,7 +6,11 @@ from .anndata_io import (
     load_10x_batches_with_optional_layers,
 )
 from .xi_downstream import run_xi_downstream_from_adata
-
+from .annotations import (
+    annotation_path,
+    available_annotations,
+    load_annotation,
+)
 __version__ = "0.1.0"
 
 __all__ = [
