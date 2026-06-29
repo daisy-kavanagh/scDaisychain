@@ -15,5 +15,4 @@ dependencies:
   - scanpy
   - scikit-image
   - pip:
-      - --no-deps
       - -e .
