@@ -62,6 +62,15 @@ Example mouse chrX C57/Bl6 X CAST/EiJ test data are available from the GitHub Re
 wget https://github.com/daisy-kavanagh/scDaisychain/releases/download/v0.1.0/scDaisychain_mouse_chrX_test_data.tar.gz
 tar -xzf scDaisychain_mouse_chrX_test_data.tar.gz
 ```
+or with curl:
+```bash
+curl -L \
+  -o scDaisychain_mouse_chrX_test_data.tar.gz \
+  https://github.com/daisy-kavanagh/scDaisychain/releases/download/v0.1.0/scDaisychain_mouse_chrX_test_data.tar.gz
+
+tar -xzf scDaisychain_mouse_chrX_test_data.tar.gz
+```
+
 Which will produce a test_data folder with the following files:
 ```text
 test_data/
