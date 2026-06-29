@@ -13,6 +13,7 @@ dependencies:
   - htslib
   - pip
   - scanpy
+  - scikit-image
   - pip:
       - --no-deps
       - -e .
