@@ -167,7 +167,7 @@ After downstream clustering and cell type identification has been run, the per c
 ```python
 res = dc.run_xi_downstream_from_adata(
     adata,
-    annotation="mouse_mouse_chrX_PAR_escape_annotation_for_xi_pipeline.tsv",
+    annotation="mouse",
     outdir="xi_outputs",
     xi_layer="Xi",
     xa_layer="Xa",
@@ -179,9 +179,9 @@ res = dc.run_xi_downstream_from_adata(
 
 Alternatively, if you have a h5ad file with the Xa/Xi layers loaded and cell type column it can be run from command line:
 ```bash
-python xi_downstream_from_anndata.py \
+scdaisychain-xi-downstream \
   --h5ad adata.h5ad \
-  --annotation mouse_mouse_chrX_PAR_escape_annotation_for_xi_pipeline.tsv \
+  --annotation mouse \
   --outdir xi_outputs \
   --xi-layer Xi \
   --xa-layer Xa \
